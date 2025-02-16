@@ -1,4 +1,4 @@
- // Create Servey Form using Tailwind css
+<!-- // Create Servey Form using Tailwind class -->
  
  <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +129,6 @@
           </table>
         </div>
       </div>
-
       <!-- Additional Comments -->
       <div class="field mb-5">
         <label for="comments" class="block font-bold mb-2">Additional comments or suggestions</label>
@@ -140,21 +139,5 @@
       <button type="submit" class="bg-gray-400 text-white py-3 px-6 rounded-md cursor-pointer hover:bg-blue-700">Submit</button>
     </form>
   </div>
-
-  <script>
-    const stars = document.querySelectorAll(".star");
-    stars.forEach((star) => {
-      star.addEventListener("click", () => {
-        const rating = parseInt(star.dataset.rating);
-        stars.forEach((s) => {
-          if (s.dataset.rating <= rating) {
-            s.classList.add("text-red-600");
-          } else {
-            s.classList.remove("text-red-600");
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
