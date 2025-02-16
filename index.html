@@ -1,0 +1,160 @@
+ // Create Servey Form using Tailwind class
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen m-0 p-0">
+  <div class="survey-container bg-white shadow-lg w-[695px] h-[852px] p-2 rounded-lg overflow-hidden">
+    <form action="#" method="post">
+
+      <!-- Name Fields -->
+      <div class="field mb-4">
+        <label for="firstName" class="block font-bold mb-1">Name <span class="text-red-500">*</span></label>
+        <div class="flex gap-4">
+          <input type="text" id="firstName" placeholder="First" class="w-[200px] p-1 border rounded-md border-gray-300" />
+          <input type="text" id="lastName" placeholder="Last" class="w-[200px] p-1 border rounded-md border-gray-300" />
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="field mb-4">
+        <label for="email" class="block font-bold mb-1">Email<span class="text-red-500">* </span></label>
+        <input type="email" id="email" class="w-[420px] p-1 border rounded-md border-gray-300" />
+      </div>
+
+      <!-- Rating for Experience -->
+      <div class="field mb-4">
+        <label class="block font-bold mb-1">Your Experience <span class="text-red-500">*</span></label>
+        <div class="flex text-2xl mb-2">
+          <span class="star cursor-pointer text-orange-300" data-rating="1">&#9733;</span>
+          <span class="star cursor-pointer text-orange-300" data-rating="2">&#9733;</span>
+          <span class="star cursor-pointer text-orange-300" data-rating="3">&#9733;</span>
+          <span class="star cursor-pointer text-orange-300" data-rating="4">&#9733;</span>
+          <span class="star cursor-pointer text-orange-300" data-rating="5">&#9733;</span>
+        </div>
+        <p>Overall, how would you rate your experience with us?</p>
+      </div>
+
+      <!-- Satisfaction Matrix -->
+      <div class="field mb-5">
+        <label class="block font-bold mb-3">How satisfied are you with <span class="text-red-500">*</span></label>
+        <div class="matrix mb-5">
+          <table class="w-full border-collapse mt-5">
+            <thead>
+              <tr>
+                <th class="text-center"> </th>
+                <th class="text-center">Very Unsatisfied</th>
+                <th class="text-center">Unsatisfied</th>
+                <th class="text-center">Neutral</th>
+                <th class="text-center">Satisfied</th>
+                <th class="text-center">Very Satisfied</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-gray-100">
+                <td class="rounded-l-md">Purchase</td>
+                <td class="text-center"><input type="radio" name="purchase" value="1" /></td>
+                <td class="text-center"><input type="radio" name="purchase" value="2" /></td>
+                <td class="text-center"><input type="radio" name="purchase" value="3" /></td>
+                <td class="text-center"><input type="radio" name="purchase" value="4" /></td>
+                <td class="text-center"><input type="radio" name="purchase" value="5" /></td>
+              </tr>
+              <tr>
+                <td>Service</td>
+                <td class="text-center"><input type="radio" name="service" value="1" /></td>
+                <td class="text-center"><input type="radio" name="service" value="2" /></td>
+                <td class="text-center"><input type="radio" name="service" value="3" /></td>
+                <td class="text-center"><input type="radio" name="service" value="4" /></td>
+                <td class="text-center"><input type="radio" name="service" value="5" /></td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="rounded-r-md">Company Overall</td>
+                <td class="text-center"><input type="radio" name="company" value="1" /></td>
+                <td class="text-center"><input type="radio" name="company" value="2" /></td>
+                <td class="text-center"><input type="radio" name="company" value="3" /></td>
+                <td class="text-center"><input type="radio" name="company" value="4" /></td>
+                <td class="text-center"><input type="radio" name="company" value="5" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Likelihood Matrix -->
+      <div class="field mb-5">
+        <label class="block font-bold mb-3">How likely are you to <span class="text-red-500">*</span></label>
+        <div class="matrix mb-5">
+          <table class="w-full border-collapse mt-5">
+            <thead>
+              <tr>
+                <th class="text-center"> </th>
+                <th class="text-center">Very Unlikely</th>
+                <th class="text-center">Unlikely</th>
+                <th class="text-center">Neutral</th>
+                <th class="text-center">Likely</th>
+                <th class="text-center">Very Likely</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-gray-100">
+                <td class="rounded-l-md">Buy from us again</td>
+                <td class="text-center"><input type="radio" name="buy_again" value="1" /></td>
+                <td class="text-center"><input type="radio" name="buy_again" value="2" /></td>
+                <td class="text-center"><input type="radio" name="buy_again" value="3" /></td>
+                <td class="text-center"><input type="radio" name="buy_again" value="4" /></td>
+                <td class="text-center"><input type="radio" name="buy_again" value="5" /></td>
+              </tr>
+              <tr>
+                <td>Recommend our product to others</td>
+                <td class="text-center"><input type="radio" name="recommend_product" value="1" /></td>
+                <td class="text-center"><input type="radio" name="recommend_product" value="2" /></td>
+                <td class="text-center"><input type="radio" name="recommend_product" value="3" /></td>
+                <td class="text-center"><input type="radio" name="recommend_product" value="4" /></td>
+                <td class="text-center"><input type="radio" name="recommend_product" value="5" /></td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="rounded-r-md" style="width: 140px;">Recommend our company to others</td>
+                <td class="text-center"><input type="radio" name="recommend_company" value="1" /></td>
+                <td class="text-center"><input type="radio" name="recommend_company" value="2" /></td>
+                <td class="text-center"><input type="radio" name="recommend_company" value="3" /></td>
+                <td class="text-center"><input type="radio" name="recommend_company" value="4" /></td>
+                <td class="text-center"><input type="radio" name="recommend_company" value="5" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Additional Comments -->
+      <div class="field mb-5">
+        <label for="comments" class="block font-bold mb-2">Additional comments or suggestions</label>
+        <textarea id="comments" class="w-full p-5 border rounded-md border-gray-300"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="bg-gray-400 text-white py-3 px-6 rounded-md cursor-pointer hover:bg-blue-700">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    stars.forEach((star) => {
+      star.addEventListener("click", () => {
+        const rating = parseInt(star.dataset.rating);
+        stars.forEach((s) => {
+          if (s.dataset.rating <= rating) {
+            s.classList.add("text-red-600");
+          } else {
+            s.classList.remove("text-red-600");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
